@@ -1,5 +1,5 @@
 import sys
-from os import system, name
+import os
 
 print('#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#')
 print('# Killa Trumpz text-based adventure #')
@@ -11,29 +11,52 @@ _BASESP = 10
 def clearScreen():
 
     # for windows
-    if name == 'nt':
-        _ = system('cls')
+    if os.name == 'nt':
+        os.system('cls')
 
     # for mac and linux(here, os.name is 'posix')
     else:
-        _ = system('clear')
+        os.system('clear')
 
+# returns dictionary with {attribute:skillpts}
 def chooseCharacter():
     sp = _BASESP
     print("=========CHARACTER CUSTOMIZATION=========")
-    
+    rangeSP = 0
+    enduranceSP = 0
+    luckSP = 0
+    monkySP = 0
+
+
     while sp > 0:
         
-        print("Customize your character! you have >>"+str(sp)+"<< skill points remaining...")
-
-        sp -= 1
+        
+        selected = input("Customize your character! you have >>" +
+                         str(sp)+"<< skill points remaining...\n\n"+
+                         "(R)ANGE  " +str(rangeSP)+ "\n(E)NDURANCE   "+str(enduranceSP)+"\n(L)UCK   " +str(luckSP)+ "\n(M)ONKY   "+str(monkySP)+"\n>> ")
+        
+        if selected.lower() == 'r':
+            print("cccc")
+            rangeSP += 1
+        elif selected.lower() == 'e':
+            enduranceSP += 1
+        elif selected.lower() == 'l':
+            luckSP += 1
+        elif selected.lower() == 'm':
+            monkySP += 1
+        
+        if selected.lower() in ['r', 'e', 'l', 'm']:
+            sp -= 1
+        
+        clearScreen()
+        
 
 
     
 
-    clearScreen()
     
-    return 8
 
-chooseCharacter()
-print('cat')
+    return {'range': rangeSP, 'endurance':enduranceSP, 'luck':luckSP, "monky":monkySP}
+
+
+
