@@ -1,55 +1,58 @@
 # defines event
 # anything with a # is a comment and
 # is not parsed by the code
-example event
-{
 
+EVENT NAME: example event
+# how many cards does this event contain?
+CONTAINS: 4
+{
+    
     [
-        #eventID
-        1
+        #cardID
+        ID: 1
         #eventName
-        GOING TO SAFEWAY WITH WILL DUNLOP
+        TITLE: GOING TO SAFEWAY WITH WILL DUNLOP
 
         #content
         %Go to safeway with Will Dunlop
         %and get cream soda... 
 
         # choice1
-        &Yes
+        CHOICE1: Yes
         #points to eventID
-        *3
+        POINTS_TO: 3
 
         # choice2
-        &No
-        #points to eventID
-        *2
+        CHOICE_2: NO!
+        # points to eventID
+        POINTS_TO: 2
     ]
     [
-        2
-        DEAD
+        ID: 2
+        TITLE: DEAD
         %you didn't have cream soda and so you died.
-        &ok
-        *0
-        &ok
-        *0
+        CHOICE_1: ok
+        POINTS_TO: 0
+        CHOICE_2: ok
+        POINTS_TO: 0
     ]
     [
-        3
-        YAY
+        ID: 3
+        TITLE: YAY
         %you had cream soda and now you are happy.
-        &monky
-        *0
-        &monke
-        *0
+        CHOICE_1: monky
+        POINTS_TO: 0
+        CHOICE_2: monke
+        POINTS_TO: 0
     ]
     [
-        0
-        Restart
+        ID: 0
+        TITLE: Restart
         %you restarted and now you have a choice again.
-        &Yes
-        *1
-        &No
-        *0
+        CHOICE_1: Yes
+        POINTS_TO: 1
+        CHOICE_2: No
+        POINTS_TO: 0
     ]
 
 }

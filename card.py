@@ -24,9 +24,10 @@ class Card:
 
 class Event:
     
-    def __init__(self, name):
+    def __init__(self, name, cont):
         self.name = name
         self.cards = {}
+        self.size = cont
     
 if __name__ == '__main__':
     # c = Card(0,"eventName ====", ["line 1", "line 2", "line 3"], "Choice 1", "Choice 2")
