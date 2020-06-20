@@ -1,0 +1,55 @@
+# defines event
+# anything with a # is a comment and
+# is not parsed by the code
+example event
+{
+
+    [
+        #eventID
+        1
+        #eventName
+        GOING TO SAFEWAY WITH WILL DUNLOP
+
+        #content
+        %Go to safeway with Will Dunlop
+        %and get cream soda... 
+
+        # choice1
+        &Yes
+        #points to eventID
+        *3
+
+        # choice2
+        &No
+        #points to eventID
+        *2
+    ]
+    [
+        2
+        DEAD
+        %you didn't have cream soda and so you died.
+        &ok
+        *0
+        &ok
+        *0
+    ]
+    [
+        3
+        YAY
+        %you had cream soda and now you are happy.
+        &monky
+        *0
+        &monke
+        *0
+    ]
+    [
+        0
+        Restart
+        %you restarted and now you have a choice again.
+        &Yes
+        *1
+        &No
+        *0
+    ]
+
+}

@@ -58,5 +58,6 @@ def chooseCharacter():
 
     return {'range': rangeSP, 'endurance':enduranceSP, 'luck':luckSP, "monky":monkySP}
 
-
-
+def loadCards():
+    ['filler.txt', 'fall.txt']
+loadCards()
