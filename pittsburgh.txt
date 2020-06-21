@@ -4,7 +4,6 @@ order: 1, r, 2, r, 3, r, 4, 5
     
     {
         id: 1
-        filler: no
         title: Fly to Pittsburgher
         order: 1, 2
         [
@@ -76,15 +75,27 @@ order: 1, r, 2, r, 3, r, 4, 5
     ]
 
     [
-        id:
-        title: 
-        p:
-        % 
+        id: r2
+        title: bored in hotel room
+        p: 1
+        %play minecraft
         %
         %
-        choice_1:
-        effect:
-        choice_2:
-        effect: 
+        choice_1: yes
+        effect: happiness +4
+        choice_2: no
+        effect: happiness -10
     ]
 }
+    [
+        id: r3
+        title: bored in hotel room
+        p: 1
+        %play minecraft
+        %
+        %
+        choice_1: yes
+        effect: happiness +4
+        choice_2: no
+        effect: happiness -10
+    ]
