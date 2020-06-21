@@ -79,5 +79,6 @@ def loadEventFromFile(file):
             
 
 if __name__ == '__main__':
-    loadEventFromFile('example.txt')
+    event = loadEventFromFile('example.txt')
+    event.cards[1].display()
 
