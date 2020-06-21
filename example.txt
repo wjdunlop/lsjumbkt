@@ -9,50 +9,50 @@ CONTAINS: 4
     
     [
         #cardID
-        ID: 1
+        id: 1
         #eventName
-        TITLE: GOING TO SAFEWAY WITH WILL DUNLOP
+        title: GOING TO SAFEWAY WITH WILL DUNLOP
 
         #content
         %Go to safeway with Will Dunlop
         %and get cream soda... 
 
         # choice1
-        CHOICE1: Yes
+        choice_1: Yes
         #points to eventID
-        POINTS_TO: 3
+        points_to: 3
 
         # choice2
-        CHOICE_2: NO!
+        choice_2: NO!
         # points to eventID
-        POINTS_TO: 2
+        points_to: 2
     ]
     [
-        ID: 2
-        TITLE: DEAD
-        %you didn't have cream soda and so you died.
-        CHOICE_1: ok
-        POINTS_TO: 0
-        CHOICE_2: ok
-        POINTS_TO: 0
+        id: 2
+        title: DEAD
+        %You didn't have cream soda and so you died.
+        choice_1: ok
+        points_to: 0
+        choice_2: ok
+        points_to: 0
     ]
     [
-        ID: 3
-        TITLE: YAY
+        id: 3
+        title: YAY
         %you had cream soda and now you are happy.
-        CHOICE_1: monky
-        POINTS_TO: 0
-        CHOICE_2: monke
-        POINTS_TO: 0
+        choice_1: monky
+        points_to: 0
+        choice_2: monke
+        points_to: 0
     ]
     [
-        ID: 0
-        TITLE: Restart
+        id: 0
+        title: Restart
         %you restarted and now you have a choice again.
-        CHOICE_1: Yes
-        POINTS_TO: 1
-        CHOICE_2: No
-        POINTS_TO: 0
+        choice_1: Yes
+        points_to: 1
+        choice_2: No
+        points_to: 0
     ]
 
 }
