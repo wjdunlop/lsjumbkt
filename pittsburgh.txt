@@ -62,6 +62,82 @@ order: 1, r, 2, r, 3, r, 4, 5
         ]
     }
 
+    {
+        id: 3
+        title: travel to library
+        order: 1,2
+        [
+            id: 1
+            title: get yelled at on the light rail
+            p: .5
+            %You got yelled at on the light rail. Do you respond?
+            choice_1: yes
+            effect: you die
+            choice_2: no
+            effect: happiness -4
+        ]
+        [
+            id: 2
+            title: Trolley Stop Inn
+            %You arrive at the Trolley Stop Inn.
+            %What is a hoagie?
+            choice_1: I don't know
+            effect: humiliated by waitress
+            choice_2: A sandwich
+            effect: charisma +1
+        ]
+    }
+
+    {
+        id: 4
+        title: National Championships
+        order: 1,2
+        [
+            id: 1
+            title: In the stands
+            p: 1
+            %Do you ask to play the Hell solo?
+            choice_1: yes
+            effect: you succeed, happiness +4
+            choice_2: no
+            effect: None
+        ]
+        [
+            id: 2
+            title: eat confetti
+            %You are hungry. Do you eat confetti?
+            choice_1: Yes
+            effect: you are sated
+            choice_2: No
+            effect: die from hunger
+        ]
+    }
+
+    {
+        id: 5
+        title: Traveling back
+        order: 1, 2
+        [
+            id: 1
+            title: you are lost
+            p: .8
+            %You get lost, who does your group follow for direction
+            choice_1: will healzer
+            effect: you find your way to the plane
+            choice_2: someone else
+            effect: you are lost, and have to take a later flight. happiness -200
+        ]
+        [
+            id:2
+            title: flying home
+            %You had fun in Pittsburgh
+            choice_1: ok
+            effect: happiness +20
+            choice_2: OK but bigger
+            effect: happiness +21
+        ]
+    }
+
     # fillers defined below here in cards []
     [
         id: r1
@@ -74,17 +150,5 @@ order: 1, r, 2, r, 3, r, 4, 5
         choice_2: oreo+pie
         effect: happiness +10
     ]
-
-    [
-        id:
-        title: 
-        p:
-        % 
-        %
-        %
-        choice_1:
-        effect:
-        choice_2:
-        effect: 
-    ]
+ 
 }
