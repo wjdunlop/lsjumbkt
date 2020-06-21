@@ -74,9 +74,7 @@ def loadEventFromFile(file):
                 rightID = int(item[10:].strip())
             if c is not 2:
                 c += 1 
-    
-    # for k in thisEvent.cards.keys():
-    #     thisEvent.cards[k].display()
+
     return thisEvent
             
 
