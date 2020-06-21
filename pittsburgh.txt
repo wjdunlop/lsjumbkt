@@ -167,13 +167,13 @@ order: 1, r, 2, r, 3, r, 4, 5
         id: r3
         title: bored in hotel room
         p: 1
-        %play minecraft
+        %use spectrum view to summon the w av  e s
+        %u like???
         %
-        %
-        choice_1: yes
-        effect: happiness +4
+        choice_1: oo OOOoOooooooooOOoOooO
+        effect: happiness +10
         choice_2: no
-        effect: happiness -10
+        effect: happiness -25
     ]
 
  
