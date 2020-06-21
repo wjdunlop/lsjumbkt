@@ -1,5 +1,5 @@
 # defines event
-# anything with a # is a comment and
+# anything with a leading # is a comment and
 # is not parsed by the code
 
 EVENT NAME: example event

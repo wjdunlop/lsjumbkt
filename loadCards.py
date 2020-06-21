@@ -1,5 +1,5 @@
 from card import Card, Event
-def loadCards(file):
+def loadEventFromFile(file):
     lines = open(file).readlines()
     readLines = []
 
@@ -30,8 +30,10 @@ def loadCards(file):
 
     name = finalLines[0]
     cont = int(finalLines[1][9:].strip())
-    finalLines = finalLines[11:]
+    # print(finalLines)
+    finalLines = finalLines[2:]
     thisEvent = Event(name, cont)
+    
     for item in finalLines[2:-1]:
         
         if item == '[':
@@ -39,6 +41,7 @@ def loadCards(file):
             pass
 
         elif item == ']':
+            # print("ID: ",_id)
             thisEvent.cards[_id] = Card(_id, title, contents, leftChoice, rightChoice, leftID, rightID)
             c = 0
             _id = 0
@@ -72,13 +75,11 @@ def loadCards(file):
             if c is not 2:
                 c += 1 
     
-    print(thisEvent.name)
-    print("# of cards  ", thisEvent.size)
-    for card in thisEvent.cards:
-        
-        thisEvent.cards[card].display()
+    # for k in thisEvent.cards.keys():
+    #     thisEvent.cards[k].display()
+    return thisEvent
             
 
 if __name__ == '__main__':
-    loadCards('example.txt')
+    loadEventFromFile('example.txt')
 

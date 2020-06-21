@@ -1,12 +1,12 @@
 import sys
 import os
+from loadCards import loadEventFromFile
 
 print('#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#')
 print('# Killa Trumpz text-based adventure #')
 print('#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#')
 
 _BASESP = 10
-
 
 def clearScreen():
 
@@ -58,6 +58,7 @@ def chooseCharacter():
 
     return {'range': rangeSP, 'endurance':enduranceSP, 'luck':luckSP, "monky":monkySP}
 
-def loadCards():
-    ['filler.txt', 'fall.txt']
-loadCards()
+#TEST CODE
+event = loadEventFromFile('example.txt')
+
+

@@ -17,8 +17,9 @@ class Card:
         print(self.eventName)
         for line in self.contents:
             print(line)
-        
+        print("---")
         print(self.leftChoice+ '  or  '+ self.rightChoice)
+        print("flow #debug")
         print(self.leftID,' <==> ',self.rightID)
         print("=============")
 
