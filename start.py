@@ -1,22 +1,14 @@
+
 import sys
 import os
-from loadCards import structureEventFromFile
+from util import clearScreen
+
 
 print('#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#')
 print('# Killa Trumpz text-based adventure #')
 print('#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#')
 
 _BASESP = 10
-
-def clearScreen():
-
-    # for windows
-    if os.name == 'nt':
-        os.system('cls')
-
-    # for mac and linux(here, os.name is 'posix')
-    else:
-        os.system('clear')
 
 # returns dictionary with {attribute:skillpts}
 def chooseCharacter():
@@ -49,12 +41,6 @@ def chooseCharacter():
             sp -= 1
         
         clearScreen()
-        
-
-
-    
-
-    
 
     return {'range': rangeSP, 'endurance':enduranceSP, 'luck':luckSP, "monky":monkySP}
 
