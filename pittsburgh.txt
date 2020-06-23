@@ -1,6 +1,8 @@
-title: Pittsburgh Air Trip
-order: 1, r, 2, r, 3, r, 4, 5
+
 {
+    id: 0
+    title: Pittsburgh Air Trip
+    order: 1, r, 2, r, 3, r, 4, 5
     
     {
         id: 1
@@ -36,7 +38,7 @@ order: 1, r, 2, r, 3, r, 4, 5
     {
         id: 2
         title: Eat food
-        order: rand
+        order: r
         [
             id: 1
             title: what to eat

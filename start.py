@@ -1,6 +1,6 @@
 import sys
 import os
-from loadCards import loadEventFromFile
+from loadCards import structureEventFromFile
 
 print('#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#')
 print('# Killa Trumpz text-based adventure #')
@@ -59,6 +59,6 @@ def chooseCharacter():
     return {'range': rangeSP, 'endurance':enduranceSP, 'luck':luckSP, "monky":monkySP}
 
 #TEST CODE
-event = loadEventFromFile('example.txt')
+event = structureEventFromFile('example.txt')
 
 

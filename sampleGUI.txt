@@ -1,0 +1,32 @@
+        Frosh Rehearsal
+        >> group sit <<
+
+      						|   
+      	what is your    	|   band 		 [======      ] #GUI.scores['band']
+      	favorite flavor 	|   happiness 	 [======      ]	
+      	of paint?			|   academics 	 [======      ]
+      						|	--------------------
+      						|	special stat [===========]  
+      						|
+      (1) red
+      (2) aaaaaaa				
+      __________________________________________________
+      > 2
+
+######################################################################
+
+        Frosh Rehearsal
+        >> should you stay?  <<
+
+      						|   
+      	what is your    	|   band 		 [===========]
+      	favorite flavor 	|   happiness 	 [===========]
+      	of paint?			|   academics 	 [======     ]
+      						|	--------------------
+      						|	special stat [===========]
+      						|
+
+      (1) yes, hang out   
+      (2) no, go do homework				
+      __________________________________________________
+      >
