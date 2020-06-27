@@ -1,8 +1,5 @@
 import queue
 
-MESSAGE_DISPLAY_LENGTH = 25
-STATS_DISPLAY_LENGTH = 27
-
 
 class GUI:
     def __init__(self):
@@ -15,6 +12,9 @@ class GUI:
         self.special_stat_on = False
         self.special_stat_val = 0
         self.options = []
+
+        self.message_display_length = 25
+        self.stat_display_length = 27
 
     def push(self, info_dict):
         """
@@ -45,25 +45,25 @@ class GUI:
         stats_list = self._generate_stats_list()
         empty_line = '{s:<{message_length}}{mid:^1}' \
                      '{s:>{stat_length}}'.format(s=' ', mid='|',
-                                                 message_length=MESSAGE_DISPLAY_LENGTH,
-                                                 stat_length=STATS_DISPLAY_LENGTH)
+                                                 message_length=self.message_display_length,
+                                                 stat_length=self.stat_display_length)
         print(empty_line)
 
         for stat in stats_list:
             if not message_queue.empty():
                 message = message_queue.get()
             else:
-                message = ' ' * MESSAGE_DISPLAY_LENGTH
+                message = ' ' * self.message_display_length
             print('{message:<{message_length}}{mid:^1}'
                   '{stat:>{stat_length}}'.format(message=message,
                                                  mid='|',
                                                  stat=stat,
-                                                 message_length=MESSAGE_DISPLAY_LENGTH,
-                                                 stat_length=STATS_DISPLAY_LENGTH))
+                                                 message_length=self.message_display_length,
+                                                 stat_length=self.stat_display_length))
         while not message_queue.empty():
             print('{message:<{message_length}}{mid:^1}'.format(message=message_queue.get(),
                                                                mid='|',
-                                                               message_length=MESSAGE_DISPLAY_LENGTH))
+                                                               message_length=self.message_display_length))
         print(empty_line)
         print()
 
@@ -77,15 +77,15 @@ class GUI:
         length for each line
         """
         result = queue.Queue()
-        if len(self.event_message) > MESSAGE_DISPLAY_LENGTH:
+        if len(self.event_message) > self.message_display_length:
             words = self.event_message.split()
             curr = ''
             for word in words:
-                if (len(curr) + len(word)) < MESSAGE_DISPLAY_LENGTH:
+                if (len(curr) + len(word)) < self.message_display_length:
                     curr += word + ' '
                 else:
                     result.put(curr)
-                    curr = ''
+                    curr = word + ' '
 
             # Catches edge cases
             if curr:
