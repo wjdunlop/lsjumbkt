@@ -2,19 +2,18 @@ import queue
 
 
 class GUI:
-    def __init__(self):
+    def __init__(self, message_display_length=25, stat_display_length=27):
         self.card_title = ''
         self.event_title = ''
         self.event_message = ''
         self.band = ''
         self.happiness = 0
         self.academics = 0
-        self.special_stat_on = False
-        self.special_stat_val = 0
+        self.special_stat = (False, 0)
         self.options = []
 
-        self.message_display_length = 25
-        self.stat_display_length = 27
+        self.message_display_length = message_display_length
+        self.stat_display_length = stat_display_length
 
     def push(self, info_dict):
         """
@@ -28,8 +27,7 @@ class GUI:
         self.band = info_dict['band']
         self.happiness = info_dict['happiness']
         self.academics = info_dict['academics']
-        self.special_stat_on = info_dict['special_stat_on']
-        self.special_stat_val = info_dict['special_stat_val']
+        self.special_stat = info_dict['special_stat']
         self.options = info_dict['options']
 
         return self._update()
@@ -111,9 +109,9 @@ class GUI:
                   self._format_stat('happiness', self.happiness),
                   self._format_stat('academics', self.academics)]
 
-        if self.special_stat_on:
+        if self.special_stat[0]:
             result.append('-' * 25)
-            result.append(self._format_stat('special stat', self.special_stat_val))
+            result.append(self._format_stat('special stat', self.special_stat[1]))
 
         return result
 
@@ -144,13 +142,13 @@ def debug():
     gui.band = 10
     gui.happiness = 10
     gui.academics = 1
-    gui.special_stat_on = False
-    gui.special_stat_val = 10
 
     gui.card_title = 'Frosh Rehearsal'
     gui.event_title = 'group sit'
 
     gui.options = ['red', 'green', 'aaaaa']
+
+    gui.special_stat = (True, 5)
 
     print(gui._update())
 
