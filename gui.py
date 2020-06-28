@@ -36,6 +36,7 @@ class GUI:
 
     def _update(self):
         # Prints out the headers
+        print()
         print(self.card_title)
         event_title = '>> ' + self.event_title + ' <<'
         print(event_title)
@@ -67,7 +68,17 @@ class GUI:
         print(empty_line)
         print()
 
-        choice = 0
+        for i in range(len(self.options)):
+            print('({n}) {option}'.format(n=i + 1, option=self.options[i]))
+
+        print()
+        print('-' * (self.message_display_length + self.stat_display_length + 1))
+
+        choice = self._handle_input()
+
+        print()
+        print('#' * (self.message_display_length + self.stat_display_length + 1))
+
         return choice
 
     def _format_message(self):
@@ -115,6 +126,13 @@ class GUI:
         bar = '{s:=<{bar_width}}{s: <{fill_width}}'.format(s='', bar_width=val, fill_width=10 - val)
         return '{name:<13}[{bar}]'.format(name=name, bar=bar)
 
+    def _handle_input(self):
+        choice = input('> ')
+        while (not choice.isdigit()) or (int(choice) not in range(1, len(self.options) + 1)):
+            print('Invalid input, please enter a number from the choices above.')
+            choice = input('> ')
+        return int(choice)
+
 
 def debug():
     gui = GUI()
@@ -132,7 +150,9 @@ def debug():
     gui.card_title = 'Frosh Rehearsal'
     gui.event_title = 'group sit'
 
-    gui._update()
+    gui.options = ['red', 'green', 'aaaaa']
+
+    print(gui._update())
 
 
 if __name__ == '__main__':
