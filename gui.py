@@ -77,7 +77,7 @@ class GUI:
         print()
         print('#' * (self.message_display_length + self.stat_display_length + 1))
 
-        return choice
+        return choice - 1
 
     def _format_message(self):
         """
