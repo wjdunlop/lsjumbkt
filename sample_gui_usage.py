@@ -5,7 +5,7 @@ import gui
 # are the same as their default values, these refer to some display formatting
 # parameters that are best not changed, especially stat_display_length
 
-gui = gui.GUI()  # simpler init
+gui = gui.GUI(message_display_length=25)  # simpler init
 
 info_dict_1 = {
     'card_title': 'Frosh Rehearsal',
@@ -37,3 +37,5 @@ else:
     info_dict_2['happiness'] = info_dict_1['happiness'] + 3
 
 sexion_chosen = gui.push(info_dict_2)
+
+print(info_dict_2['options'][sexion_chosen])
