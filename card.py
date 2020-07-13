@@ -7,6 +7,7 @@ class Card:
         self.p = p
         self.effect_1 = effect_1
         self.effect_2 = effect_2
+        self.isCard = True
 
         # GUI-visible attributes
         self.eventName = eventName
@@ -32,8 +33,16 @@ class Event:
     
     def __init__(self, name, cont):
         self.name = name
-        self.contents = {}
-        self.size = cont
+        self.isCard = False
+        self.contents = cont
+        self.size = len(cont)
+
+    def display(self):
+        print("NAME: ", self.name)
+        print("CONTS: ", self.contents)
+    
+    def decompose(self):
+        return self.contents
     
 if __name__ == '__main__':
     # c = Card(0,"eventName ====", ["line 1", "line 2", "line 3"], "Choice 1", "Choice 2")

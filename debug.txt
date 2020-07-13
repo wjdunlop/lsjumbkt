@@ -1,0 +1,62 @@
+e1,r,e2,e3
+e1(1),e2(2),e3(3)
+
+id: 1
+title: RIP LUGGAGE
+p: .5
+%lose your luggage
+%(happiness down 4pts)
+choice_1: ok
+effect_1: happiness -4
+choice_2: ok
+effect_2: happiness -4
+$
+
+id: 2
+title: Where do you sleep
+p: 1
+%More senior members of band have taken
+%The single available bed.
+%Where do you sleep? On the couch
+%or in the shower?
+choice_1: couch
+effect_1: happiness +4
+choice_2: shower
+effect_2: happiness +10
+$
+    
+id: 3
+title: what to eat
+p: 1
+%tacos or
+%quesa dil ae
+choice_1: tacos
+effect_1: happiness +4
+choice_2: quesadilla
+effect_2: happiness +4
+$
+
+id: r1
+title: hungry at night
+p: 1
+%burber king oopen
+%what do you order
+choice_1: nothing
+effect_1: none
+choice_2: oreo+pie
+effect_2: happiness +10
+$
+
+id: r2
+title: bagus
+p: 1
+%fire truck 
+%moster truck
+choice_1: nothing
+effect_1: none
+choice_2: walter
+effect_2: happiness +10
+$
+
+
+

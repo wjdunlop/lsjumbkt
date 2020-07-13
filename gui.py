@@ -6,7 +6,7 @@ class GUI:
         self.card_title = ''
         self.event_title = ''
         self.event_message = ''
-        self.band = ''
+        self.band = 0
         self.happiness = 0
         self.academics = 0
         self.special_stat = (False, 0)

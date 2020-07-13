@@ -1,183 +1,143 @@
+e1,e2,e3,e4,e5
+e1(1,2),e2(3,4),e3(5,6),e4(7,8),e5(9,10)
 
-{
-    id: 0
-    title: Pittsburgh Air Trip
-    order: 1, r, 2, r, 3, r, 4, 5
+id: 1
+title: RIP LUGGAGE
+p: .5
+%lose your luggage
+%(happiness down 4pts)
+choice_1: ok
+effect_1: happiness -4
+choice_2: ok
+effect_2: happiness -4
+$
+
+id: 2
+title: Where do you sleep
+p: 1
+%More senior members of band have taken
+%The single available bed.
+%Where do you sleep? On the couch
+%or in the shower?
+choice_1: couch
+effect_1: happiness +4
+choice_2: shower
+effect_2: happiness +10
+$
     
-    {
-        id: 1
-        title: Fly to Pittsburgher
-        order: 1, 2
-        [
-            id: 1
-            title: RIP LUGGAGE
-            p: .5
-            %lose your luggage
-            %(happiness down 4pts)
-            choice_1: ok
-            effect: happiness -4
-            choice_2: ok
-            effect: happiness -4
-        ]
+id: 3
+title: what to eat
+p: 1
+%tacos or
+%quesa dil ae
+choice_1: tacos
+effect_1: happiness +4
+choice_2: quesadilla
+effect_2: happiness +4
+$
 
-        [
-            id: 2
-            title: Where do you sleep
-            p: 1
-            %More senior members of band have taken
-            %The single available bed.
-            %Where do you sleep? On the couch
-            %or in the shower?
-            choice_1: couch
-            effect: happiness +4
-            choice_2: shower
-            effect: happiness +10
-        ]
-    }
+id: 4
+title: Garrison canal
+p: 1
+%enjoy the garrison canal?
+choice_1: yes
+effect_1: happiness +1
+choice_2: no
+effect_2: happiness -100
+$   
 
-    {
-        id: 2
-        title: Eat food
-        order: r
-        [
-            id: 1
-            title: what to eat
-            p: 1
-            %tacos or
-            %quesa dil ae
-            choice_1: tacos
-            effect: happiness +4
-            choice_2: quesadilla
-            effect: happiness +4
-        ]
+id: 5
+title: get yelled at on the light rail
+p: .5
+%You got yelled at on the light rail. Do you respond?
+choice_1: yes
+effect_1: you die
+choice_2: no
+effect_2: happiness -4
+$
 
-        [
-            id: 2
-            title: Garrison canal
-            p: 1
-            %enjoy the garrison canal?
-            choice_1: yes
-            effect: happiness +1
-            choice_2: no
-            effect: happiness -100
-        ]
-    }
+id: 6
+title: Trolley Stop Inn
+%You arrive at the Trolley Stop Inn.
+%What is a hoagie?
+choice_1: I don't know
+effect_1: humiliated by waitress
+choice_2: A sandwich
+effect_2: charisma +1
+$  
 
-    {
-        id: 3
-        title: travel to library
-        order: 1,2
-        [
-            id: 1
-            title: get yelled at on the light rail
-            p: .5
-            %You got yelled at on the light rail. Do you respond?
-            choice_1: yes
-            effect: you die
-            choice_2: no
-            effect: happiness -4
-        ]
-        [
-            id: 2
-            title: Trolley Stop Inn
-            %You arrive at the Trolley Stop Inn.
-            %What is a hoagie?
-            choice_1: I don't know
-            effect: humiliated by waitress
-            choice_2: A sandwich
-            effect: charisma +1
-        ]
-    }
+id: 7
+title: In the stands
+p: 1
+%Do you ask to play the Hell solo?
+choice_1: yes
+effect_1: you succeed, happiness +4
+choice_2: no
+effect_2: None
+$
 
-    {
-        id: 4
-        title: National Championships
-        order: 1,2
-        [
-            id: 1
-            title: In the stands
-            p: 1
-            %Do you ask to play the Hell solo?
-            choice_1: yes
-            effect: you succeed, happiness +4
-            choice_2: no
-            effect: None
-        ]
-        [
-            id: 2
-            title: eat confetti
-            %You are hungry. Do you eat confetti?
-            choice_1: Yes
-            effect: you are sated
-            choice_2: No
-            effect: die from hunger
-        ]
-    }
+id: 8
+title: eat confetti
+%You are hungry. Do you eat confetti?
+choice_1: Yes
+effect_1: you are sated
+choice_2: No
+effect_2: die from hunger
+$       
 
-    {
-        id: 5
-        title: Traveling back
-        order: 1, 2
-        [
-            id: 1
-            title: you are lost
-            p: .8
-            %You get lost, who does your group follow for direction
-            choice_1: will healzer
-            effect: you find your way to the plane
-            choice_2: someone else
-            effect: you are lost, and have to take a later flight. happiness -200
-        ]
-        [
-            id:2
-            title: flying home
-            %You had fun in Pittsburgh
-            choice_1: ok
-            effect: happiness +20
-            choice_2: OK but bigger
-            effect: happiness +21
-        ]
-    }
+id: 9
+title: you are lost
+p: .8
+%You get lost, who does your group follow for direction
+choice_1: will healzer
+effect_1: you find your way to the plane
+choice_2: someone else
+effect_2: you are lost, and have to take a later flight. happiness -200
+$
 
-    # fillers defined below here in cards []
-    [
-        id: r1
-        title: hungry at night
-        p: 1
-        %burber king oopen
-        %what do you order
-        choice_1: nothing
-        effect: none
-        choice_2: oreo+pie
-        effect: happiness +10
-    ]
+id: 10
+title: flying home
+%You had fun in Pittsburgh
+choice_1: ok
+effect_1: happiness +20
+choice_2: OK but bigger
+effect_2: happiness +21
+$
 
-    [
-        id: r2
-        title: bored in hotel room
-        p: 1
-        %play minecraft
-        %
-        %
-        choice_1: yes
-        effect: happiness +4
-        choice_2: no
-        effect: happiness -10
-    ]
+id: r1
+title: hungry at night
+p: 1
+%burber king oopen
+%what do you order
+choice_1: nothing
+effect_1: none
+choice_2: oreo+pie
+effect_2: happiness +10
+$
 
-    [
-        id: r3
-        title: bored in hotel room
-        p: 1
-        %use spectrum view to summon the w av  e s
-        %u like???
-        %
-        choice_1: oo OOOoOooooooooOOoOooO
-        effect: happiness +10
-        choice_2: no
-        effect: happiness -25
-    ]
+id: r2
+title: bored in hotel room
+p: 1
+%play minecraft
+%
+%
+choice_1: yes
+effect_1: happiness +4l
+choice_2: no
+effect_2: happiness -10
+$
 
- 
-}
+id: r3
+title: bored in hotel room
+p: 1
+%use spectrum view to summon the w av  e s
+%u like???
+%
+choice_1: oo OOOoOooooooooOOoOooO
+effect_1: happiness +10
+choice_2: no
+effect_2: happiness -25
+$
+
+
 

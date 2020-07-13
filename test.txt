@@ -1,0 +1,26 @@
+(1,2)
+
+id: 1
+title: RIP LUGGAGE
+p: .5
+%lose your luggage
+%(happiness down 4pts)
+choice_1: ok
+effect_1: happiness -4
+choice_2: ok
+effect_2: happiness -4
+$
+
+id: 2
+title: Where do you sleep
+p: 1
+%More senior members of band have taken
+%The single available bed.
+%Where do you sleep? On the couch
+%or in the shower?
+choice_1: couch
+effect_1: happiness +4
+choice_2: shower
+effect_2: happiness +10
+$
+    
